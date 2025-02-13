@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60ECFF1E2D5DEBC800A41556 /* VariableBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ECFF1D2D5DEBC800A41556 /* VariableBlur.swift */; };
 		F7E942AD2A24F7C8007DC5B7 /* VariableBlurViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E942AC2A24F7C8007DC5B7 /* VariableBlurViewApp.swift */; };
 		F7E942AF2A24F7C8007DC5B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E942AE2A24F7C8007DC5B7 /* ContentView.swift */; };
 		F7E942B12A24F7CA007DC5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E942B02A24F7CA007DC5B7 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60ECFF1D2D5DEBC800A41556 /* VariableBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableBlur.swift; sourceTree = "<group>"; };
 		F7E942A92A24F7C8007DC5B7 /* VariableBlurView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VariableBlurView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E942AC2A24F7C8007DC5B7 /* VariableBlurViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableBlurViewApp.swift; sourceTree = "<group>"; };
 		F7E942AE2A24F7C8007DC5B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				F7E942AC2A24F7C8007DC5B7 /* VariableBlurViewApp.swift */,
 				F7E942AE2A24F7C8007DC5B7 /* ContentView.swift */,
 				F7E942BD2A24F7F3007DC5B7 /* CAFilter.h */,
+				60ECFF1D2D5DEBC800A41556 /* VariableBlur.swift */,
 				F7E942BC2A24F7F3007DC5B7 /* VariableBlurView-Bridging-Header.h */,
 				F7E942B02A24F7CA007DC5B7 /* Assets.xcassets */,
 				F7E942B22A24F7CA007DC5B7 /* Preview Content */,
@@ -144,6 +147,7 @@
 			files = (
 				F7E942AF2A24F7C8007DC5B7 /* ContentView.swift in Sources */,
 				F7E942AD2A24F7C8007DC5B7 /* VariableBlurViewApp.swift in Sources */,
+				60ECFF1E2D5DEBC800A41556 /* VariableBlur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
