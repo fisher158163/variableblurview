@@ -8,6 +8,62 @@
 import SwiftUI
 //import UIKit
 
+// 图片名称和描述信息的数组
+let imageInfoArray = [("sequoia",  "Sequoia"),
+                      ("sonoma",   "Sonoma"),
+                      ("monterey", "Monterey"),
+                      ("catalina", "Catalina"),
+                      ("mojave",   "Mojave"),
+                      ("sierra",   "Sierra")]
+
+// 自定义视图组件，用于显示图片和文字
+struct ImageWithTextView: View {
+    let imageName: String
+    let desc: String
+    
+    var body: some View {
+        ZStack {
+            Image(imageName)
+               .resizable()
+               .aspectRatio(contentMode: .fit)
+               .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+               .padding()
+            Text(desc)
+               .font(.largeTitle)
+        }
+        .padding(.bottom, 0)
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        ZStack {
+            ScrollView(.vertical) {
+                VStack(spacing: -10) {
+                    // 遍历数组并使用ImageWithTextView组件显示图片和文字
+                    ForEach(imageInfoArray.indices, id: \.self) { index in
+                        let (imageName, desc) = imageInfoArray[index]
+                        ImageWithTextView(imageName: imageName, desc: desc)
+                    }
+                }
+            }
+            VStack {
+                VariableBlurView()
+                   .frame(height: 100)
+                   .allowsHitTesting(false)
+                Spacer()
+            }
+        }
+       .ignoresSafeArea(.all)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
 //class VariableBlurUIView: UIVisualEffectView {
 //
 //    init(gradientMask: UIImage, maxBlurRadius: CGFloat = 20) {
@@ -54,35 +110,3 @@ import SwiftUI
 //        // No-op
 //    }
 //}
-
-struct ContentView: View {
-    var body: some View {
-        ZStack {
-            ScrollView(.vertical) {
-                VStack {
-                    Image("camping")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
-                        .padding()
-                }
-                .padding(.top, 50)
-            }
-
-            VStack {
-                VariableBlurView()
-                    .frame(height: 100)
-                    .allowsHitTesting(false)
-
-                Spacer()
-            }
-        }
-        .ignoresSafeArea(.all)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
