@@ -30,6 +30,7 @@ struct ImageWithTextView: View {
                .padding()
             Text(desc)
                .font(.largeTitle)
+               .foregroundColor(.white)
         }
         .padding(.bottom, 0)
     }
