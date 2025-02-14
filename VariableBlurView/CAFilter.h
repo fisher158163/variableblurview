@@ -11,5 +11,7 @@
 /// https://developer.limneos.net/index.php?ios=16.3&framework=QuartzCore.framework&header=CAFilter.h
 ///
 @interface CAFilter : NSObject
+
 + (id)filterWithType:(id)arg1;
+
 @end
