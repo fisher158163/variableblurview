@@ -26,7 +26,7 @@ struct ImageWithTextView: View {
             Image(imageName)
                .resizable()
                .aspectRatio(contentMode: .fit)
-               .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+               .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                .padding()
             Text(desc)
                .font(.largeTitle)
